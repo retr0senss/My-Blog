@@ -1,0 +1,27 @@
+<%- include("partials/header") %>
+    <article>
+        <div class="container">
+            <div class="title">
+                <h1>
+                    <%= Post.title %>
+                </h1>
+
+            </div>
+            <div class="content">
+                <span>
+                    <%= Post.content %>
+                </span>
+            </div>
+            <form action="/delete" method="post" style="display: inline;">
+                <button name="deletebutton" type="submit" class="btn btn-danger mt-2 btn-sm"
+                    value="<%=Post._id%>">Delete</button>
+            </form>
+            <form action="/articles/edit" method="post" style="display: inline;">
+                <button name="editbutton" type="submit" class="btn btn-secondary mt-2 btn-sm"
+                    value="<%=Post._id%>">Edit</button>
+            </form>
+
+        </div>
+
+    </article>
+    <%- include("partials/footer") %>

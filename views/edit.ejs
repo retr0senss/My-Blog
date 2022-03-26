@@ -1,0 +1,22 @@
+<%- include("partials/header") %>
+    <div class="container">
+        <form method="post" action="/articles/edittedpost">
+            <!-- Title input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="Title">Title</label>
+                <input type="text" id="Title" class="form-control" name="title" value="<%=Post.title%>" />
+            </div>
+
+            <!-- Content input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="Content">Content</label>
+                <textarea class="form-control" id="Content" name="content" rows="6"><%=Post.content%></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" name="savebutton" class="btn btn-primary btn-block mb-4"
+                value="<%=Post._id%>">Save</button>
+        </form>
+    </div>
+
+    <%- include("partials/footer") %>

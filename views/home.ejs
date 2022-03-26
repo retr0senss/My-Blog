@@ -1,0 +1,23 @@
+<%- include("partials/header") %>
+
+    <% Post.forEach((post)=>{ %>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8">
+                    <div class="post-preview"><a href=<%="/articles/" + post._id%>>
+                            <h2 class="post-title">
+                                <%= post.title %>
+                            </h2>
+                            <h3 class="post-subtitle">
+                                <%= post.content %>
+                            </h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <% }) %>
+
+
+            <%- include("partials/footer") %>
